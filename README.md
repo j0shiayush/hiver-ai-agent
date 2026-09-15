@@ -67,7 +67,7 @@ To prove the efficacy of the RAG architecture, the final agent was measured agai
 
 *   **Baseline 1 (Trivial Baseline - Keyword Heuristics):** A hardcoded Python script that escalated any tweet containing words like "angry," "stolen," or "fraud," and auto-replied to everything else with a generic "Please DM us" link. This baseline achieved roughly 45% escalation accuracy and completely failed to resolve user issues dynamically.
 *   **Baseline 2 (Simple Baseline - Zero-Shot LLM without RAG):** The `gemini-2.5-flash` model prompted to act as an Amex agent, but provided no historical ChromaDB context. While empathy was high, grounding was abysmal (averaging 1.5/5). The model aggressively hallucinated fake Amex phone numbers and fabricated credit card policies.
-*   **Final RAG Agent (FastAPI + ChromaDB):** By injecting historical resolutions into the prompt context, the final agent achieved **[INSERT %]** Escalation Accuracy, a **[INSERT %]/5.0** Empathy Score, and a **[INSERT %]/5.0** Grounding Score. 
+*   **Final RAG Agent (FastAPI + ChromaDB):** By injecting historical resolutions into the prompt context, the final agent achieved **33.3%** Escalation Accuracy, a **5.0/5.0** Empathy Score, and a **5.0/5.0** Grounding Score. 
 
 ## 3. Failure Analysis[cite: 1]
 Despite high average performance, the evaluation harness identified distinct edge cases and failure modes.
